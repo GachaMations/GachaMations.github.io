@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <h1>Gacha Unity</h1>
+
+  <p>Images will be added here eventually.</p>
+  <div id="markdown"></div>
+  <a href="https://github.com/GachaMations/GachaUnity" style="position:absolute;right:50%;transform:translate(50%,50%)"><img src="/openrepo.svg"></a>
+  <script type="text/javascript">
+    fetch("https://raw.githubusercontent.com/GachaMations/GachaUnity/main/README.md")
+      .then((response) => response.text())
+      .then((git) => {
+        const md = document.createElement("github-md")
+        const mdText = document.createTextNode(git)
+        md.appendChild(mdText)
+        document.getElementById("markdown").appendChild(md)
+        renderMarkdown();
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script>
+  <div class="projects" style="position:absolute;width: 100%; top: 450px;padding-bottom: 20px;">
+    <h2 clas="title" style="position:relative;top: -20px;">GAMES</h2>
+    <a class="project" href="life/">
+      <img src="/placeholder.png" height="200" width="350">
+      <div class="info">
+        <p class="infoText">Gacha Life Unity</p>
+    </div>
+  </div>
+</body>
+
+</html
